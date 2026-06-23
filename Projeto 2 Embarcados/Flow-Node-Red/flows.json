@@ -1,0 +1,2687 @@
+[
+    {
+        "id": "39b0d48024e4df0e",
+        "type": "tab",
+        "label": "Geral",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bacc3f750c5d42b9",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Local",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "nod-red-receptor",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "baeeacb01aa5f19c",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "973bd80e0c817912",
+        "type": "ui-theme",
+        "name": "FireWatch Theme",
+        "colors": {
+            "surface": "#0f2742",
+            "primary": "#c62828",
+            "bgPage": "#eef2f5",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9e1e8"
+        },
+        "sizes": {
+            "density": "comfortable",
+            "pagePadding": "16px",
+            "groupGap": "14px",
+            "groupBorderRadius": "12px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "0de61a65d343a61f",
+        "type": "ui-page",
+        "name": "FireWatch IFSP",
+        "ui": "baeeacb01aa5f19c",
+        "path": "/monitoramento",
+        "icon": "monitor-dashboard",
+        "layout": "grid",
+        "theme": "973bd80e0c817912",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b1e0e49c9c51603a",
+        "type": "ui-group",
+        "name": "FireWatch — Monitoramento de Incêndio",
+        "page": "0de61a65d343a61f",
+        "width": "12",
+        "height": "2",
+        "order": 1,
+        "showTitle": true,
+        "className": "fw-general",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f4cccf14bcfd77a9",
+        "type": "MySQLdatabase",
+        "name": "BD",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_incendio",
+        "tz": "",
+        "charset": "UTF8MB4"
+    },
+    {
+        "id": "a62a6cdfe28c2ff6",
+        "type": "ui-group",
+        "name": "ESP32 #1 Normal",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "11",
+        "order": 3,
+        "showTitle": true,
+        "className": "fw-device",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2f0cae2d5d0f835e",
+        "type": "ui-group",
+        "name": "ESP32 #2 Wokwi",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "11",
+        "order": 4,
+        "showTitle": true,
+        "className": "fw-device",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fa4411529c15919b",
+        "type": "ui-group",
+        "name": "ESP32 #3 Tela CYD",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "11",
+        "order": 5,
+        "showTitle": true,
+        "className": "fw-device",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5718d79d31d1cbcd",
+        "type": "ui-group",
+        "name": "Histórico ESP32 #1",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "5",
+        "order": 6,
+        "showTitle": true,
+        "className": "fw-gantt",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3a67532c3debfd41",
+        "type": "ui-group",
+        "name": "Histórico ESP32 #2",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "5",
+        "order": 7,
+        "showTitle": true,
+        "className": "fw-gantt",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d4a13ffb6ef5d07c",
+        "type": "ui-group",
+        "name": "Histórico ESP32 #3",
+        "page": "0de61a65d343a61f",
+        "width": "4",
+        "height": "5",
+        "order": 8,
+        "showTitle": true,
+        "className": "fw-gantt",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1071ef7c228a2f38",
+        "type": "ui-group",
+        "name": "Controle Geral",
+        "page": "0de61a65d343a61f",
+        "width": "12",
+        "height": "2",
+        "order": 2,
+        "showTitle": true,
+        "className": "fw-general",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e5297091a76d2ce2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "18.229.134.103",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5a33fa8f7240a87a",
+        "type": "ui-page",
+        "name": "Análises",
+        "ui": "baeeacb01aa5f19c",
+        "path": "/analises",
+        "icon": "chart-line",
+        "layout": "grid",
+        "theme": "973bd80e0c817912",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ceb17dbffeac024b",
+        "type": "ui-group",
+        "name": "Filtros de análise",
+        "page": "5a33fa8f7240a87a",
+        "width": "12",
+        "height": "2",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "01697f6c16070624",
+        "type": "ui-group",
+        "name": "Indicadores",
+        "page": "5a33fa8f7240a87a",
+        "width": "12",
+        "height": "2",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c2e11a11232cfca3",
+        "type": "ui-group",
+        "name": "Temperatura histórica",
+        "page": "5a33fa8f7240a87a",
+        "width": "12",
+        "height": "2",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9137400b8c8ab2d5",
+        "type": "mqtt out",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "topic": "ESP32/node-red",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bacc3f750c5d42b9",
+        "x": 310,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "491c7d8b7b078196",
+        "type": "json",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "2d4691e57d52924e"
+            ]
+        ]
+    },
+    {
+        "id": "24d609d037aff7dc",
+        "type": "mqtt in",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "topic": "ESP32/+/status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "bacc3f750c5d42b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "491c7d8b7b078196"
+            ]
+        ]
+    },
+    {
+        "id": "2d4691e57d52924e",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Preparar INSERT MySQL",
+        "func": "// ============================================================\n// PREPARAR INSERT MYSQL\n// ============================================================\n\nconst dados = msg.payload;\n\n// Preserva o tópico MQTT antes de sobrescrever msg.topic\nconst topicoMqtt = String(msg.topic ?? \"\");\n\nif (\n    dados === null ||\n    typeof dados !== \"object\" ||\n    Array.isArray(dados)\n) {\n    node.warn(\"Payload MQTT inválido.\");\n    return null;\n}\n\n// ============================================================\n// CAMPOS OBRIGATÓRIOS\n// ============================================================\n\nconst deviceId = String(\n    dados.device_id ?? \"\"\n).trim();\n\nconst temperatura = Number(\n    dados.temperature\n);\n\nif (deviceId === \"\") {\n    node.warn(\"Mensagem sem device_id.\");\n    return null;\n}\n\nif (!Number.isFinite(temperatura)) {\n    node.warn(\"Temperatura inválida.\");\n    return null;\n}\n\n// ============================================================\n// FUNÇÕES AUXILIARES\n// ============================================================\n\nfunction booleano(valor) {\n    return (\n        valor === true ||\n        Number(valor) === 1\n    ) ? 1 : 0;\n}\n\nfunction numeroOpcional(valor) {\n    const numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? numero\n        : null;\n}\n\n// ============================================================\n// TRATAMENTO DOS CAMPOS\n// ============================================================\n\nconst setpoint = numeroOpcional(\n    dados.setpoint ??\n    dados.threshold\n);\n\nconst acimaSetpoint =\n    dados.temperature_above_setpoint !== undefined\n        ? booleano(dados.temperature_above_setpoint)\n        : (\n            setpoint !== null &&\n                temperatura > setpoint\n                ? 1\n                : 0\n        );\n\nconst botao = booleano(\n    dados.button\n);\n\nconst alarme = booleano(\n    dados.alarm\n);\n\nconst sprinkler = booleano(\n    dados.sprinkler\n);\n\nconst ledVerde = booleano(\n    dados.led_green\n);\n\nconst ledAlarme = booleano(\n    dados.led_alarm\n);\n\nconst estado = String(\n    dados.state ??\n    (\n        alarme === 1\n            ? \"risco_incendio\"\n            : \"normal\"\n    )\n).trim();\n\nconst wifiRssi = numeroOpcional(\n    dados.wifi_rssi\n);\n\nconst uptimeRecebido = numeroOpcional(\n    dados.uptime_ms\n);\n\nconst uptimeMs =\n    uptimeRecebido === null\n        ? null\n        : Math.trunc(uptimeRecebido);\n\nconst temperaturaArredondada =\n    Math.round(temperatura * 100) / 100;\n\nconst setpointArredondado =\n    setpoint === null\n        ? null\n        : Math.round(setpoint * 100) / 100;\n\n// ============================================================\n// INSERT PARAMETRIZADO\n// ============================================================\n\nmsg.topic = `\n    INSERT INTO leituras_esp32 (\n        device_id,\n        mqtt_topic,\n        temperatura,\n        setpoint,\n        acima_setpoint,\n        botao,\n        alarme,\n        sprinkler,\n        led_verde,\n        led_alarme,\n        estado,\n        wifi_rssi,\n        uptime_ms\n    )\n    VALUES (\n        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?\n    );\n`;\n\nmsg.payload = [\n    deviceId,\n    topicoMqtt,\n    temperaturaArredondada,\n    setpointArredondado,\n    acimaSetpoint,\n    botao,\n    alarme,\n    sprinkler,\n    ledVerde,\n    ledAlarme,\n    estado,\n    wifiRssi,\n    uptimeMs\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "c971b643fcdc242c"
+            ]
+        ]
+    },
+    {
+        "id": "c971b643fcdc242c",
+        "type": "mysql",
+        "z": "39b0d48024e4df0e",
+        "mydb": "f4cccf14bcfd77a9",
+        "name": "",
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "63112d0f132caf79"
+            ]
+        ]
+    },
+    {
+        "id": "63112d0f132caf79",
+        "type": "debug",
+        "z": "39b0d48024e4df0e",
+        "name": "debug BD",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9d02efe231be30b8",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "",
+        "page": "0de61a65d343a61f",
+        "ui": "",
+        "name": "CSS FireWatch",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "/* ============================================================\n   FIREWATCH — ESTILO GERAL DA PÁGINA DE MONITORAMENTO\n   ============================================================ */\n\n/* Cartão de comandos gerais */\n.fw-general {\n    border: 1px solid #d9e1e8 !important;\n    border-top: 4px solid #c62828 !important;\n    border-radius: 14px !important;\n    box-shadow: 0 4px 14px rgba(15, 39, 66, 0.10) !important;\n    overflow: hidden;\n}\n\n/* Cartões dos ESP32 */\n.fw-device {\n    border: 1px solid #d9e1e8 !important;\n    border-top: 4px solid #0f2742 !important;\n    border-radius: 14px !important;\n    box-shadow: 0 4px 14px rgba(15, 39, 66, 0.10) !important;\n    overflow: hidden;\n}\n\n/* Cartões dos gráficos de Gantt */\n.fw-gantt {\n    border: 1px solid #d9e1e8 !important;\n    border-top: 4px solid #1976d2 !important;\n    border-radius: 14px !important;\n    box-shadow: 0 4px 14px rgba(15, 39, 66, 0.10) !important;\n    overflow: hidden;\n}\n\n/* Títulos dos cartões */\n.fw-general .v-card-title,\n.fw-device .v-card-title,\n.fw-gantt .v-card-title {\n    color: #0f2742 !important;\n    font-weight: 700 !important;\n    letter-spacing: 0.4px;\n}\n\n/* Botões */\n.fw-general .v-btn,\n.fw-device .v-btn {\n    font-weight: 700;\n    letter-spacing: 0.3px;\n    border-radius: 8px;\n}\n\n/* Campos numéricos */\n.fw-device .v-field {\n    border-radius: 8px;\n}\n\n/* Gauge */\n.fw-device .nrdb-ui-gauge {\n    padding: 4px;\n}",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "page:style",
+        "className": "",
+        "x": 300,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65ac4869566ef710",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Preparar consultas histórica",
+        "func": "// ============================================================\n// PREPARAR CONSULTAS DOS TRÊS HISTÓRICOS\n// ============================================================\n\nconst consulta = `\n    SELECT\n        UNIX_TIMESTAMP(\n            MIN(recebido_em)\n        ) * 1000 AS timestamp_ms,\n\n        MAX(alarme) AS alarme,\n        MAX(sprinkler) AS sprinkler\n\n    FROM leituras_esp32\n\n    WHERE device_id = ?\n\n    AND recebido_em >=\n        NOW() - INTERVAL 6 HOUR\n\n    GROUP BY\n        FLOOR(\n            UNIX_TIMESTAMP(recebido_em) / 10\n        )\n\n    ORDER BY\n        timestamp_ms ASC;\n`;\n\nfunction criarMensagem(deviceId) {\n    return {\n        device_id: deviceId,\n        topic: consulta,\n        payload: [deviceId]\n    };\n}\n\nreturn [\n    criarMensagem(\"esp32-01\"),\n    criarMensagem(\"esp32-02\"),\n    criarMensagem(\"esp32-03\")\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 380,
+        "wires": [
+            [
+                "a5b8a725a67adc52"
+            ],
+            [
+                "a5b8a725a67adc52"
+            ],
+            [
+                "a5b8a725a67adc52"
+            ]
+        ]
+    },
+    {
+        "id": "fcec0f93291af330",
+        "type": "inject",
+        "z": "39b0d48024e4df0e",
+        "name": "Atualizar Históricos",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "65ac4869566ef710"
+            ]
+        ]
+    },
+    {
+        "id": "601389b7429850f1",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Formatar históricos",
+        "func": "// ============================================================\n// FORMATAR HISTÓRICO OPERACIONAL\n//\n// Saída 1: ESP32-01\n// Saída 2: ESP32-02\n// Saída 3: ESP32-03\n// ============================================================\n\nconst JANELA_MS =\n    6 * 60 * 60 * 1000;\n\nconst INTERVALO_AMOSTRA_MS =\n    10 * 1000;\n\nconst LIMITE_OFFLINE_MS =\n    30 * 1000;\n\nconst fimJanela = Date.now();\nconst inicioJanela =\n    fimJanela - JANELA_MS;\n\nconst linhas = Array.isArray(msg.payload)\n    ? msg.payload\n        .map(linha => ({\n            timestamp:\n                Number(linha.timestamp_ms),\n\n            alarme:\n                Number(linha.alarme) === 1\n                    ? 1\n                    : 0,\n\n            sprinkler:\n                Number(linha.sprinkler) === 1\n                    ? 1\n                    : 0\n        }))\n        .filter(linha =>\n            Number.isFinite(\n                linha.timestamp\n            )\n        )\n        .sort(\n            (a, b) =>\n                a.timestamp -\n                b.timestamp\n        )\n    : [];\n\n// ============================================================\n// ADICIONAR INTERVALO\n// ============================================================\n\nfunction adicionarIntervalo(\n    intervalos,\n    inicio,\n    fim,\n    estado\n) {\n    const inicioLimitado =\n        Math.max(\n            inicio,\n            inicioJanela\n        );\n\n    const fimLimitado =\n        Math.min(\n            fim,\n            fimJanela\n        );\n\n    if (\n        fimLimitado >\n        inicioLimitado\n    ) {\n        intervalos.push({\n            start: inicioLimitado,\n            end: fimLimitado,\n            state: estado\n        });\n    }\n}\n\n// ============================================================\n// CONSTRUIR INTERVALOS\n// ============================================================\n\nfunction construirIntervalos(\n    campo,\n    estadoAtivo,\n    estadoInativo\n) {\n    const intervalos = [];\n\n    if (linhas.length === 0) {\n        adicionarIntervalo(\n            intervalos,\n            inicioJanela,\n            fimJanela,\n            \"offline\"\n        );\n\n        return intervalos;\n    }\n\n    const primeiraLinha =\n        linhas[0];\n\n    const primeiroTimestamp =\n        primeiraLinha.timestamp;\n\n    if (\n        primeiroTimestamp -\n        inicioJanela >\n        LIMITE_OFFLINE_MS\n    ) {\n        adicionarIntervalo(\n            intervalos,\n            inicioJanela,\n            primeiroTimestamp,\n            \"offline\"\n        );\n    }\n\n    let estadoAtual =\n        primeiraLinha[campo] === 1\n            ? estadoAtivo\n            : estadoInativo;\n\n    let inicioEstado =\n        primeiroTimestamp -\n        inicioJanela <=\n        LIMITE_OFFLINE_MS\n            ? inicioJanela\n            : primeiroTimestamp;\n\n    let timestampAnterior =\n        primeiroTimestamp;\n\n    for (\n        let i = 1;\n        i < linhas.length;\n        i++\n    ) {\n        const linha =\n            linhas[i];\n\n        const timestamp =\n            linha.timestamp;\n\n        const novoEstado =\n            linha[campo] === 1\n                ? estadoAtivo\n                : estadoInativo;\n\n        const intervaloSemDados =\n            timestamp -\n            timestampAnterior;\n\n        // Período sem comunicação\n        if (\n            intervaloSemDados >\n            LIMITE_OFFLINE_MS\n        ) {\n            adicionarIntervalo(\n                intervalos,\n                inicioEstado,\n                timestampAnterior +\n                    INTERVALO_AMOSTRA_MS,\n                estadoAtual\n            );\n\n            adicionarIntervalo(\n                intervalos,\n                timestampAnterior +\n                    INTERVALO_AMOSTRA_MS,\n                timestamp,\n                \"offline\"\n            );\n\n            estadoAtual =\n                novoEstado;\n\n            inicioEstado =\n                timestamp;\n        }\n        // Mudança de estado\n        else if (\n            novoEstado !==\n            estadoAtual\n        ) {\n            adicionarIntervalo(\n                intervalos,\n                inicioEstado,\n                timestamp,\n                estadoAtual\n            );\n\n            estadoAtual =\n                novoEstado;\n\n            inicioEstado =\n                timestamp;\n        }\n\n        timestampAnterior =\n            timestamp;\n    }\n\n    const tempoSemRegistro =\n        fimJanela -\n        timestampAnterior;\n\n    if (\n        tempoSemRegistro >\n        LIMITE_OFFLINE_MS\n    ) {\n        adicionarIntervalo(\n            intervalos,\n            inicioEstado,\n            timestampAnterior +\n                INTERVALO_AMOSTRA_MS,\n            estadoAtual\n        );\n\n        adicionarIntervalo(\n            intervalos,\n            timestampAnterior +\n                INTERVALO_AMOSTRA_MS,\n            fimJanela,\n            \"offline\"\n        );\n    } else {\n        adicionarIntervalo(\n            intervalos,\n            inicioEstado,\n            fimJanela,\n            estadoAtual\n        );\n    }\n\n    return intervalos;\n}\n\n// ============================================================\n// PAYLOAD PARA O DASHBOARD\n// ============================================================\n\nconst resposta = {\n    device_id:\n        msg.device_id,\n\n    start:\n        inicioJanela,\n\n    end:\n        fimJanela,\n\n    updated_at:\n        Date.now(),\n\n    alarm_intervals:\n        construirIntervalos(\n            \"alarme\",\n            \"alerta\",\n            \"normal\"\n        ),\n\n    sprinkler_intervals:\n        construirIntervalos(\n            \"sprinkler\",\n            \"ativo\",\n            \"inativo\"\n        )\n};\n\nconst mensagem = {\n    payload: resposta\n};\n\nswitch (msg.device_id) {\n    case \"esp32-01\":\n        return [\n            mensagem,\n            null,\n            null\n        ];\n\n    case \"esp32-02\":\n        return [\n            null,\n            mensagem,\n            null\n        ];\n\n    case \"esp32-03\":\n        return [\n            null,\n            null,\n            mensagem\n        ];\n\n    default:\n        node.warn(\n            `Dispositivo desconhecido: ${msg.device_id}`\n        );\n\n        return [\n            null,\n            null,\n            null\n        ];\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 380,
+        "wires": [
+            [
+                "f201a77883d2c007"
+            ],
+            [
+                "5656eec51ee3f5d1"
+            ],
+            [
+                "142bbca9e82e783c"
+            ]
+        ]
+    },
+    {
+        "id": "f201a77883d2c007",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "5718d79d31d1cbcd",
+        "page": "",
+        "ui": "",
+        "name": "Gantt ESP32-01",
+        "order": 1,
+        "width": "4",
+        "height": "3",
+        "head": "",
+        "format": "<template>\n    <div class=\"fw-history\">\n        <div class=\"fw-history-header\">\n            <span>Últimas 6 horas</span>\n\n            <span class=\"fw-updated\">\n                Atualizado:\n                {{ updatedTime }}\n            </span>\n        </div>\n\n        <!-- ESTADO -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Estado\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in alarmSegments\"\n                    :key=\"'alarm-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- SPRINKLER -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Sprinkler\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in sprinklerSegments\"\n                    :key=\"'sprinkler-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- HORÁRIOS -->\n        <div class=\"fw-time-axis\">\n            <span>{{ startTime }}</span>\n            <span>{{ middleTime }}</span>\n            <span>{{ endTime }}</span>\n        </div>\n\n        <!-- RESUMO -->\n        <div class=\"fw-history-summary\">\n            <span>\n                Alerta:\n                <strong>{{ alarmPercent }}%</strong>\n            </span>\n\n            <span>\n                Sprinkler:\n                <strong>{{ sprinklerPercent }}%</strong>\n            </span>\n        </div>\n\n        <!-- LEGENDA -->\n        <div class=\"fw-history-legend\">\n            <span>\n                <i class=\"fw-legend-normal\"></i>\n                Normal\n            </span>\n\n            <span>\n                <i class=\"fw-legend-alert\"></i>\n                Alerta\n            </span>\n\n            <span>\n                <i class=\"fw-legend-sprinkler\"></i>\n                Sprinkler ativo\n            </span>\n\n            <span>\n                <i class=\"fw-legend-offline\"></i>\n                Sem dados\n            </span>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        data() {\n            return this.msg?.payload ?? {}\n        },\n\n        windowStart() {\n            return Number(\n                this.data.start ??\n                Date.now()\n            )\n        },\n\n        windowEnd() {\n            return Number(\n                this.data.end ??\n                Date.now()\n            )\n        },\n\n        alarmSegments() {\n            return Array.isArray(\n                this.data.alarm_intervals\n            )\n                ? this.data.alarm_intervals\n                : []\n        },\n\n        sprinklerSegments() {\n            return Array.isArray(\n                this.data.sprinkler_intervals\n            )\n                ? this.data.sprinkler_intervals\n                : []\n        },\n\n        startTime() {\n            return this.formatTime(\n                this.windowStart\n            )\n        },\n\n        middleTime() {\n            return this.formatTime(\n                (\n                    this.windowStart +\n                    this.windowEnd\n                ) / 2\n            )\n        },\n\n        endTime() {\n            return this.formatTime(\n                this.windowEnd\n            )\n        },\n\n        updatedTime() {\n            return this.formatTime(\n                Number(\n                    this.data.updated_at ??\n                    Date.now()\n                )\n            )\n        },\n\n        alarmPercent() {\n            return this.calculatePercent(\n                this.alarmSegments,\n                \"alerta\"\n            )\n        },\n\n        sprinklerPercent() {\n            return this.calculatePercent(\n                this.sprinklerSegments,\n                \"ativo\"\n            )\n        }\n    },\n\n    methods: {\n        formatTime(timestamp) {\n            return new Date(\n                timestamp\n            ).toLocaleTimeString(\n                \"pt-BR\",\n                {\n                    hour: \"2-digit\",\n                    minute: \"2-digit\"\n                }\n            )\n        },\n\n        segmentColor(state) {\n            const colors = {\n                normal: \"#2e7d32\",\n                alerta: \"#c62828\",\n                ativo: \"#1976d2\",\n                inativo: \"#cbd5e1\",\n                offline: \"#6b7280\"\n            }\n\n            return colors[state] ??\n                \"#6b7280\"\n        },\n\n        segmentStyle(segment) {\n            const duration =\n                this.windowEnd -\n                this.windowStart\n\n            if (duration <= 0) {\n                return {}\n            }\n\n            const left =\n                (\n                    (\n                        Number(segment.start) -\n                        this.windowStart\n                    ) /\n                    duration\n                ) * 100\n\n            const width =\n                (\n                    (\n                        Number(segment.end) -\n                        Number(segment.start)\n                    ) /\n                    duration\n                ) * 100\n\n            return {\n                left:\n                    `${Math.max(0, left)}%`,\n\n                width:\n                    `${Math.max(0.15, width)}%`,\n\n                background:\n                    this.segmentColor(\n                        segment.state\n                    )\n            }\n        },\n\n        segmentTooltip(segment) {\n            const estado =\n                String(segment.state)\n                    .toUpperCase()\n\n            const inicio =\n                new Date(\n                    segment.start\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            const fim =\n                new Date(\n                    segment.end\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            return (\n                `${estado}\\n` +\n                `Início: ${inicio}\\n` +\n                `Fim: ${fim}`\n            )\n        },\n\n        calculatePercent(\n            segments,\n            targetState\n        ) {\n            const total =\n                this.windowEnd -\n                this.windowStart\n\n            if (total <= 0) {\n                return \"0.0\"\n            }\n\n            const targetDuration =\n                segments\n                    .filter(\n                        segment =>\n                            segment.state ===\n                            targetState\n                    )\n                    .reduce(\n                        (sum, segment) =>\n                            sum +\n                            (\n                                Number(segment.end) -\n                                Number(segment.start)\n                            ),\n                        0\n                    )\n\n            return (\n                (\n                    targetDuration /\n                    total\n                ) * 100\n            ).toFixed(1)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-history {\n    width: 100%;\n    padding: 2px 4px 6px;\n    box-sizing: border-box;\n}\n\n.fw-history-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n\n    margin-bottom: 12px;\n\n    color: #0f2742;\n    font-size: 12px;\n    font-weight: 700;\n}\n\n.fw-updated {\n    color: #6b7280;\n    font-size: 9px;\n    font-weight: 500;\n}\n\n.fw-history-row {\n    display: grid;\n    grid-template-columns: 58px 1fr;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 9px;\n}\n\n.fw-history-label {\n    color: #374151;\n    font-size: 10px;\n    font-weight: 700;\n}\n\n.fw-history-track {\n    position: relative;\n\n    height: 18px;\n    overflow: hidden;\n\n    border: 1px solid #d1d5db;\n    border-radius: 5px;\n    background: #eef1f4;\n}\n\n.fw-history-segment {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n\n    min-width: 1px;\n    border-right: 1px solid\n        rgba(255, 255, 255, 0.45);\n}\n\n.fw-time-axis {\n    display: flex;\n    justify-content: space-between;\n\n    margin-left: 66px;\n    margin-top: -3px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-summary {\n    display: flex;\n    justify-content: space-between;\n\n    margin-top: 9px;\n\n    color: #374151;\n    font-size: 10px;\n}\n\n.fw-history-summary strong {\n    color: #0f2742;\n}\n\n.fw-history-legend {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 8px 12px;\n\n    margin-top: 9px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-legend span {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n}\n\n.fw-history-legend i {\n    display: inline-block;\n\n    width: 9px;\n    height: 9px;\n\n    border-radius: 2px;\n}\n\n.fw-legend-normal {\n    background: #2e7d32;\n}\n\n.fw-legend-alert {\n    background: #c62828;\n}\n\n.fw-legend-sprinkler {\n    background: #1976d2;\n}\n\n.fw-legend-offline {\n    background: #6b7280;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1440,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5656eec51ee3f5d1",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "3a67532c3debfd41",
+        "page": "",
+        "ui": "",
+        "name": "Gantt ESP32-01",
+        "order": 1,
+        "width": "4",
+        "height": "3",
+        "head": "",
+        "format": "<template>\n    <div class=\"fw-history\">\n        <div class=\"fw-history-header\">\n            <span>Últimas 6 horas</span>\n\n            <span class=\"fw-updated\">\n                Atualizado:\n                {{ updatedTime }}\n            </span>\n        </div>\n\n        <!-- ESTADO -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Estado\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in alarmSegments\"\n                    :key=\"'alarm-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- SPRINKLER -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Sprinkler\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in sprinklerSegments\"\n                    :key=\"'sprinkler-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- HORÁRIOS -->\n        <div class=\"fw-time-axis\">\n            <span>{{ startTime }}</span>\n            <span>{{ middleTime }}</span>\n            <span>{{ endTime }}</span>\n        </div>\n\n        <!-- RESUMO -->\n        <div class=\"fw-history-summary\">\n            <span>\n                Alerta:\n                <strong>{{ alarmPercent }}%</strong>\n            </span>\n\n            <span>\n                Sprinkler:\n                <strong>{{ sprinklerPercent }}%</strong>\n            </span>\n        </div>\n\n        <!-- LEGENDA -->\n        <div class=\"fw-history-legend\">\n            <span>\n                <i class=\"fw-legend-normal\"></i>\n                Normal\n            </span>\n\n            <span>\n                <i class=\"fw-legend-alert\"></i>\n                Alerta\n            </span>\n\n            <span>\n                <i class=\"fw-legend-sprinkler\"></i>\n                Sprinkler ativo\n            </span>\n\n            <span>\n                <i class=\"fw-legend-offline\"></i>\n                Sem dados\n            </span>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        data() {\n            return this.msg?.payload ?? {}\n        },\n\n        windowStart() {\n            return Number(\n                this.data.start ??\n                Date.now()\n            )\n        },\n\n        windowEnd() {\n            return Number(\n                this.data.end ??\n                Date.now()\n            )\n        },\n\n        alarmSegments() {\n            return Array.isArray(\n                this.data.alarm_intervals\n            )\n                ? this.data.alarm_intervals\n                : []\n        },\n\n        sprinklerSegments() {\n            return Array.isArray(\n                this.data.sprinkler_intervals\n            )\n                ? this.data.sprinkler_intervals\n                : []\n        },\n\n        startTime() {\n            return this.formatTime(\n                this.windowStart\n            )\n        },\n\n        middleTime() {\n            return this.formatTime(\n                (\n                    this.windowStart +\n                    this.windowEnd\n                ) / 2\n            )\n        },\n\n        endTime() {\n            return this.formatTime(\n                this.windowEnd\n            )\n        },\n\n        updatedTime() {\n            return this.formatTime(\n                Number(\n                    this.data.updated_at ??\n                    Date.now()\n                )\n            )\n        },\n\n        alarmPercent() {\n            return this.calculatePercent(\n                this.alarmSegments,\n                \"alerta\"\n            )\n        },\n\n        sprinklerPercent() {\n            return this.calculatePercent(\n                this.sprinklerSegments,\n                \"ativo\"\n            )\n        }\n    },\n\n    methods: {\n        formatTime(timestamp) {\n            return new Date(\n                timestamp\n            ).toLocaleTimeString(\n                \"pt-BR\",\n                {\n                    hour: \"2-digit\",\n                    minute: \"2-digit\"\n                }\n            )\n        },\n\n        segmentColor(state) {\n            const colors = {\n                normal: \"#2e7d32\",\n                alerta: \"#c62828\",\n                ativo: \"#1976d2\",\n                inativo: \"#cbd5e1\",\n                offline: \"#6b7280\"\n            }\n\n            return colors[state] ??\n                \"#6b7280\"\n        },\n\n        segmentStyle(segment) {\n            const duration =\n                this.windowEnd -\n                this.windowStart\n\n            if (duration <= 0) {\n                return {}\n            }\n\n            const left =\n                (\n                    (\n                        Number(segment.start) -\n                        this.windowStart\n                    ) /\n                    duration\n                ) * 100\n\n            const width =\n                (\n                    (\n                        Number(segment.end) -\n                        Number(segment.start)\n                    ) /\n                    duration\n                ) * 100\n\n            return {\n                left:\n                    `${Math.max(0, left)}%`,\n\n                width:\n                    `${Math.max(0.15, width)}%`,\n\n                background:\n                    this.segmentColor(\n                        segment.state\n                    )\n            }\n        },\n\n        segmentTooltip(segment) {\n            const estado =\n                String(segment.state)\n                    .toUpperCase()\n\n            const inicio =\n                new Date(\n                    segment.start\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            const fim =\n                new Date(\n                    segment.end\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            return (\n                `${estado}\\n` +\n                `Início: ${inicio}\\n` +\n                `Fim: ${fim}`\n            )\n        },\n\n        calculatePercent(\n            segments,\n            targetState\n        ) {\n            const total =\n                this.windowEnd -\n                this.windowStart\n\n            if (total <= 0) {\n                return \"0.0\"\n            }\n\n            const targetDuration =\n                segments\n                    .filter(\n                        segment =>\n                            segment.state ===\n                            targetState\n                    )\n                    .reduce(\n                        (sum, segment) =>\n                            sum +\n                            (\n                                Number(segment.end) -\n                                Number(segment.start)\n                            ),\n                        0\n                    )\n\n            return (\n                (\n                    targetDuration /\n                    total\n                ) * 100\n            ).toFixed(1)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-history {\n    width: 100%;\n    padding: 2px 4px 6px;\n    box-sizing: border-box;\n}\n\n.fw-history-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n\n    margin-bottom: 12px;\n\n    color: #0f2742;\n    font-size: 12px;\n    font-weight: 700;\n}\n\n.fw-updated {\n    color: #6b7280;\n    font-size: 9px;\n    font-weight: 500;\n}\n\n.fw-history-row {\n    display: grid;\n    grid-template-columns: 58px 1fr;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 9px;\n}\n\n.fw-history-label {\n    color: #374151;\n    font-size: 10px;\n    font-weight: 700;\n}\n\n.fw-history-track {\n    position: relative;\n\n    height: 18px;\n    overflow: hidden;\n\n    border: 1px solid #d1d5db;\n    border-radius: 5px;\n    background: #eef1f4;\n}\n\n.fw-history-segment {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n\n    min-width: 1px;\n    border-right: 1px solid\n        rgba(255, 255, 255, 0.45);\n}\n\n.fw-time-axis {\n    display: flex;\n    justify-content: space-between;\n\n    margin-left: 66px;\n    margin-top: -3px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-summary {\n    display: flex;\n    justify-content: space-between;\n\n    margin-top: 9px;\n\n    color: #374151;\n    font-size: 10px;\n}\n\n.fw-history-summary strong {\n    color: #0f2742;\n}\n\n.fw-history-legend {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 8px 12px;\n\n    margin-top: 9px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-legend span {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n}\n\n.fw-history-legend i {\n    display: inline-block;\n\n    width: 9px;\n    height: 9px;\n\n    border-radius: 2px;\n}\n\n.fw-legend-normal {\n    background: #2e7d32;\n}\n\n.fw-legend-alert {\n    background: #c62828;\n}\n\n.fw-legend-sprinkler {\n    background: #1976d2;\n}\n\n.fw-legend-offline {\n    background: #6b7280;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1440,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "142bbca9e82e783c",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "d4a13ffb6ef5d07c",
+        "page": "",
+        "ui": "",
+        "name": "Gantt ESP32-03",
+        "order": 1,
+        "width": "4",
+        "height": "3",
+        "head": "",
+        "format": "<template>\n    <div class=\"fw-history\">\n        <div class=\"fw-history-header\">\n            <span>Últimas 6 horas</span>\n\n            <span class=\"fw-updated\">\n                Atualizado:\n                {{ updatedTime }}\n            </span>\n        </div>\n\n        <!-- ESTADO -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Estado\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in alarmSegments\"\n                    :key=\"'alarm-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- SPRINKLER -->\n        <div class=\"fw-history-row\">\n            <div class=\"fw-history-label\">\n                Sprinkler\n            </div>\n\n            <div class=\"fw-history-track\">\n                <div\n                    v-for=\"(segment, index) in sprinklerSegments\"\n                    :key=\"'sprinkler-' + index\"\n                    class=\"fw-history-segment\"\n                    :style=\"segmentStyle(segment)\"\n                    :title=\"segmentTooltip(segment)\"\n                ></div>\n            </div>\n        </div>\n\n        <!-- HORÁRIOS -->\n        <div class=\"fw-time-axis\">\n            <span>{{ startTime }}</span>\n            <span>{{ middleTime }}</span>\n            <span>{{ endTime }}</span>\n        </div>\n\n        <!-- RESUMO -->\n        <div class=\"fw-history-summary\">\n            <span>\n                Alerta:\n                <strong>{{ alarmPercent }}%</strong>\n            </span>\n\n            <span>\n                Sprinkler:\n                <strong>{{ sprinklerPercent }}%</strong>\n            </span>\n        </div>\n\n        <!-- LEGENDA -->\n        <div class=\"fw-history-legend\">\n            <span>\n                <i class=\"fw-legend-normal\"></i>\n                Normal\n            </span>\n\n            <span>\n                <i class=\"fw-legend-alert\"></i>\n                Alerta\n            </span>\n\n            <span>\n                <i class=\"fw-legend-sprinkler\"></i>\n                Sprinkler ativo\n            </span>\n\n            <span>\n                <i class=\"fw-legend-offline\"></i>\n                Sem dados\n            </span>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        data() {\n            return this.msg?.payload ?? {}\n        },\n\n        windowStart() {\n            return Number(\n                this.data.start ??\n                Date.now()\n            )\n        },\n\n        windowEnd() {\n            return Number(\n                this.data.end ??\n                Date.now()\n            )\n        },\n\n        alarmSegments() {\n            return Array.isArray(\n                this.data.alarm_intervals\n            )\n                ? this.data.alarm_intervals\n                : []\n        },\n\n        sprinklerSegments() {\n            return Array.isArray(\n                this.data.sprinkler_intervals\n            )\n                ? this.data.sprinkler_intervals\n                : []\n        },\n\n        startTime() {\n            return this.formatTime(\n                this.windowStart\n            )\n        },\n\n        middleTime() {\n            return this.formatTime(\n                (\n                    this.windowStart +\n                    this.windowEnd\n                ) / 2\n            )\n        },\n\n        endTime() {\n            return this.formatTime(\n                this.windowEnd\n            )\n        },\n\n        updatedTime() {\n            return this.formatTime(\n                Number(\n                    this.data.updated_at ??\n                    Date.now()\n                )\n            )\n        },\n\n        alarmPercent() {\n            return this.calculatePercent(\n                this.alarmSegments,\n                \"alerta\"\n            )\n        },\n\n        sprinklerPercent() {\n            return this.calculatePercent(\n                this.sprinklerSegments,\n                \"ativo\"\n            )\n        }\n    },\n\n    methods: {\n        formatTime(timestamp) {\n            return new Date(\n                timestamp\n            ).toLocaleTimeString(\n                \"pt-BR\",\n                {\n                    hour: \"2-digit\",\n                    minute: \"2-digit\"\n                }\n            )\n        },\n\n        segmentColor(state) {\n            const colors = {\n                normal: \"#2e7d32\",\n                alerta: \"#c62828\",\n                ativo: \"#1976d2\",\n                inativo: \"#cbd5e1\",\n                offline: \"#6b7280\"\n            }\n\n            return colors[state] ??\n                \"#6b7280\"\n        },\n\n        segmentStyle(segment) {\n            const duration =\n                this.windowEnd -\n                this.windowStart\n\n            if (duration <= 0) {\n                return {}\n            }\n\n            const left =\n                (\n                    (\n                        Number(segment.start) -\n                        this.windowStart\n                    ) /\n                    duration\n                ) * 100\n\n            const width =\n                (\n                    (\n                        Number(segment.end) -\n                        Number(segment.start)\n                    ) /\n                    duration\n                ) * 100\n\n            return {\n                left:\n                    `${Math.max(0, left)}%`,\n\n                width:\n                    `${Math.max(0.15, width)}%`,\n\n                background:\n                    this.segmentColor(\n                        segment.state\n                    )\n            }\n        },\n\n        segmentTooltip(segment) {\n            const estado =\n                String(segment.state)\n                    .toUpperCase()\n\n            const inicio =\n                new Date(\n                    segment.start\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            const fim =\n                new Date(\n                    segment.end\n                ).toLocaleString(\n                    \"pt-BR\"\n                )\n\n            return (\n                `${estado}\\n` +\n                `Início: ${inicio}\\n` +\n                `Fim: ${fim}`\n            )\n        },\n\n        calculatePercent(\n            segments,\n            targetState\n        ) {\n            const total =\n                this.windowEnd -\n                this.windowStart\n\n            if (total <= 0) {\n                return \"0.0\"\n            }\n\n            const targetDuration =\n                segments\n                    .filter(\n                        segment =>\n                            segment.state ===\n                            targetState\n                    )\n                    .reduce(\n                        (sum, segment) =>\n                            sum +\n                            (\n                                Number(segment.end) -\n                                Number(segment.start)\n                            ),\n                        0\n                    )\n\n            return (\n                (\n                    targetDuration /\n                    total\n                ) * 100\n            ).toFixed(1)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-history {\n    width: 100%;\n    padding: 2px 4px 6px;\n    box-sizing: border-box;\n}\n\n.fw-history-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n\n    margin-bottom: 12px;\n\n    color: #0f2742;\n    font-size: 12px;\n    font-weight: 700;\n}\n\n.fw-updated {\n    color: #6b7280;\n    font-size: 9px;\n    font-weight: 500;\n}\n\n.fw-history-row {\n    display: grid;\n    grid-template-columns: 58px 1fr;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 9px;\n}\n\n.fw-history-label {\n    color: #374151;\n    font-size: 10px;\n    font-weight: 700;\n}\n\n.fw-history-track {\n    position: relative;\n\n    height: 18px;\n    overflow: hidden;\n\n    border: 1px solid #d1d5db;\n    border-radius: 5px;\n    background: #eef1f4;\n}\n\n.fw-history-segment {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n\n    min-width: 1px;\n    border-right: 1px solid\n        rgba(255, 255, 255, 0.45);\n}\n\n.fw-time-axis {\n    display: flex;\n    justify-content: space-between;\n\n    margin-left: 66px;\n    margin-top: -3px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-summary {\n    display: flex;\n    justify-content: space-between;\n\n    margin-top: 9px;\n\n    color: #374151;\n    font-size: 10px;\n}\n\n.fw-history-summary strong {\n    color: #0f2742;\n}\n\n.fw-history-legend {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 8px 12px;\n\n    margin-top: 9px;\n\n    color: #6b7280;\n    font-size: 8px;\n}\n\n.fw-history-legend span {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n}\n\n.fw-history-legend i {\n    display: inline-block;\n\n    width: 9px;\n    height: 9px;\n\n    border-radius: 2px;\n}\n\n.fw-legend-normal {\n    background: #2e7d32;\n}\n\n.fw-legend-alert {\n    background: #c62828;\n}\n\n.fw-legend-sprinkler {\n    background: #1976d2;\n}\n\n.fw-legend-offline {\n    background: #6b7280;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1440,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3254899e8d24f128",
+        "type": "ui-dropdown",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "Filtro dispositivos",
+        "label": "Dispositivo",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "Todos",
+                "value": "all",
+                "type": "str"
+            },
+            {
+                "label": "ESP32 #1",
+                "value": "esp32-01",
+                "type": "str"
+            },
+            {
+                "label": "ESP32 #2",
+                "value": "esp32-02",
+                "type": "str"
+            },
+            {
+                "label": "ESP32 #3",
+                "value": "esp32-03",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 290,
+        "y": 520,
+        "wires": [
+            [
+                "37910cdbf7235b19"
+            ]
+        ]
+    },
+    {
+        "id": "37910cdbf7235b19",
+        "type": "change",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "analysis_device",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "719831f954eec0d3",
+        "type": "ui-text-input",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "Data Inicial",
+        "label": "Data Inicial",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "date",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "4e4748aa8dcfaa05"
+            ]
+        ]
+    },
+    {
+        "id": "944147b0c7d6f929",
+        "type": "ui-text-input",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "Hora Inicial",
+        "label": "Hora Inicial",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "cc31b2a9f8d32b78"
+            ]
+        ]
+    },
+    {
+        "id": "4e4748aa8dcfaa05",
+        "type": "change",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "analysis_start_date",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc31b2a9f8d32b78",
+        "type": "change",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "analysis_start_time",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38cee4e7fdbddf4b",
+        "type": "ui-text-input",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "Data Final",
+        "label": "Data Final",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "date",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 310,
+        "y": 760,
+        "wires": [
+            [
+                "f93236a90cb01ea2"
+            ]
+        ]
+    },
+    {
+        "id": "685cbda637acdd76",
+        "type": "ui-text-input",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "Hora Final",
+        "label": "Hora Final",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "time",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "1d0c5683cfb56c1e"
+            ]
+        ]
+    },
+    {
+        "id": "f93236a90cb01ea2",
+        "type": "change",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "analysis_end_date",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d0c5683cfb56c1e",
+        "type": "change",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "analysis_end_time",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3391d95b49f837c3",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "ceb17dbffeac024b",
+        "name": "CONSULTAR",
+        "label": "CONSULTAR",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "magnify",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#0f2742",
+        "textColor": "#ffffff",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 320,
+        "y": 920,
+        "wires": [
+            [
+                "26cf5a16e390151f"
+            ]
+        ]
+    },
+    {
+        "id": "26cf5a16e390151f",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "function 1",
+        "func": "// ============================================================\n// CONSULTAS DA PÁGINA DE ANÁLISES\n//\n// Saída 1: gráfico\n// Saída 2: indicadores\n// Saída 3: tabela\n// ============================================================\n\n// ------------------------------------------------------------\n// Funções de normalização\n// ------------------------------------------------------------\n\nfunction normalizarDispositivo(valor) {\n    const texto = String(valor ?? \"\")\n        .trim();\n\n    const mapa = {\n        \"ESP32 #1\": \"esp32-01\",\n        \"ESP32 #2\": \"esp32-02\",\n        \"ESP32 #3\": \"esp32-03\",\n        \"Todos\": \"all\",\n\n        \"esp32-01\": \"esp32-01\",\n        \"esp32-02\": \"esp32-02\",\n        \"esp32-03\": \"esp32-03\",\n        \"all\": \"all\"\n    };\n\n    return mapa[texto] ?? texto;\n}\n\nfunction normalizarData(valor) {\n    const texto = String(valor ?? \"\")\n        .trim();\n\n    // Formato esperado pelo input HTML:\n    // 2026-06-21\n    if (/^\\d{4}-\\d{2}-\\d{2}$/.test(texto)) {\n        return texto;\n    }\n\n    // Aceita também:\n    // 21/06/2026\n    const formatoBR = texto.match(\n        /^(\\d{2})\\/(\\d{2})\\/(\\d{4})$/\n    );\n\n    if (formatoBR) {\n        return (\n            `${formatoBR[3]}-` +\n            `${formatoBR[2]}-` +\n            `${formatoBR[1]}`\n        );\n    }\n\n    return \"\";\n}\n\nfunction normalizarHora(valor) {\n    const texto = String(valor ?? \"\")\n        .trim();\n\n    const resultado = texto.match(\n        /^(\\d{1,2}):(\\d{2})/\n    );\n\n    if (!resultado) {\n        return \"\";\n    }\n\n    const hora = String(resultado[1])\n        .padStart(2, \"0\");\n\n    const minuto = resultado[2];\n\n    return `${hora}:${minuto}`;\n}\n\n// ------------------------------------------------------------\n// Recuperação dos filtros\n// ------------------------------------------------------------\n\nconst deviceId = normalizarDispositivo(\n    flow.get(\"analysis_device\") ??\n    \"esp32-01\"\n);\n\nconst dataInicio = normalizarData(\n    flow.get(\"analysis_start_date\")\n);\n\nconst horaInicio = normalizarHora(\n    flow.get(\"analysis_start_time\")\n);\n\nconst dataFim = normalizarData(\n    flow.get(\"analysis_end_date\")\n);\n\nconst horaFim = normalizarHora(\n    flow.get(\"analysis_end_time\")\n);\n\nconst dispositivosPermitidos = [\n    \"all\",\n    \"esp32-01\",\n    \"esp32-02\",\n    \"esp32-03\"\n];\n\nif (!dispositivosPermitidos.includes(deviceId)) {\n    node.error(\n        `Dispositivo inválido: ${deviceId}`,\n        msg\n    );\n\n    return [null, null, null];\n}\n\n// ------------------------------------------------------------\n// Período\n// ------------------------------------------------------------\n\nlet filtroPeriodo;\nlet parametrosPeriodo;\nlet descricaoPeriodo;\n\nconst periodoCompleto =\n    dataInicio !== \"\" &&\n    horaInicio !== \"\" &&\n    dataFim !== \"\" &&\n    horaFim !== \"\";\n\nif (periodoCompleto) {\n    const inicio =\n        `${dataInicio} ${horaInicio}:00`;\n\n    const fim =\n        `${dataFim} ${horaFim}:59`;\n\n    if (fim < inicio) {\n        node.error(\n            \"A data final deve ser posterior à data inicial.\",\n            msg\n        );\n\n        return [null, null, null];\n    }\n\n    filtroPeriodo = `\n        recebido_em BETWEEN ? AND ?\n    `;\n\n    parametrosPeriodo = [\n        inicio,\n        fim\n    ];\n\n    descricaoPeriodo =\n        `${inicio} até ${fim}`;\n} else {\n    /*\n     * Fallback:\n     * caso os valores iniciais dos widgets ainda não tenham\n     * sido enviados, consulta as últimas 48 horas.\n     */\n    filtroPeriodo = `\n        recebido_em BETWEEN\n        NOW() - INTERVAL 2 DAY\n        AND NOW()\n    `;\n\n    parametrosPeriodo = [];\n\n    descricaoPeriodo =\n        \"últimas 48 horas\";\n\n    node.warn(\n        \"Os filtros de data não estavam disponíveis. \" +\n        \"Utilizando as últimas 48 horas.\"\n    );\n}\n\n// ------------------------------------------------------------\n// Filtro do dispositivo\n// ------------------------------------------------------------\n\nlet filtroDispositivo = \"\";\nlet parametrosConsulta = [\n    ...parametrosPeriodo\n];\n\nif (deviceId !== \"all\") {\n    filtroDispositivo = `\n        AND device_id = ?\n    `;\n\n    parametrosConsulta.push(\n        deviceId\n    );\n}\n\n// ------------------------------------------------------------\n// Consulta 1: gráfico\n// ------------------------------------------------------------\n\nconst mensagemGrafico = {\n    query_type: \"chart\",\n\n    filtros: {\n        device_id: deviceId,\n        periodo: descricaoPeriodo\n    },\n\n    topic: `\n        SELECT\n            device_id,\n\n            FLOOR(\n                UNIX_TIMESTAMP(recebido_em) / 60\n            ) * 60000 AS timestamp_ms,\n\n            ROUND(\n                AVG(temperatura),\n                2\n            ) AS temperatura,\n\n            ROUND(\n                AVG(setpoint),\n                2\n            ) AS setpoint\n\n        FROM leituras_esp32\n\n        WHERE ${filtroPeriodo}\n\n        ${filtroDispositivo}\n\n        GROUP BY\n            device_id,\n            FLOOR(\n                UNIX_TIMESTAMP(recebido_em) / 60\n            )\n\n        ORDER BY\n            timestamp_ms ASC,\n            device_id ASC;\n    `,\n\n    payload: [\n        ...parametrosConsulta\n    ]\n};\n\n// ------------------------------------------------------------\n// Consulta 2: indicadores\n// ------------------------------------------------------------\n\nconst mensagemKPI = {\n    query_type: \"kpi\",\n\n    filtros: {\n        device_id: deviceId,\n        periodo: descricaoPeriodo\n    },\n\n    topic: `\n        SELECT\n            ROUND(\n                MIN(temperatura),\n                1\n            ) AS temperatura_minima,\n\n            ROUND(\n                AVG(temperatura),\n                1\n            ) AS temperatura_media,\n\n            ROUND(\n                MAX(temperatura),\n                1\n            ) AS temperatura_maxima,\n\n            ROUND(\n                AVG(alarme) * 100,\n                1\n            ) AS percentual_alerta,\n\n            COUNT(*) AS total_registros\n\n        FROM leituras_esp32\n\n        WHERE ${filtroPeriodo}\n\n        ${filtroDispositivo};\n    `,\n\n    payload: [\n        ...parametrosConsulta\n    ]\n};\n\n// ------------------------------------------------------------\n// Consulta 3: tabela\n// ------------------------------------------------------------\n\nconst mensagemTabela = {\n    query_type: \"table\",\n\n    filtros: {\n        device_id: deviceId,\n        periodo: descricaoPeriodo\n    },\n\n    topic: `\n        SELECT\n            device_id AS dispositivo,\n\n            DATE_FORMAT(\n                recebido_em,\n                '%d/%m/%Y %H:%i:%s'\n            ) AS horario,\n\n            ROUND(\n                temperatura,\n                1\n            ) AS temperatura,\n\n            ROUND(\n                setpoint,\n                1\n            ) AS setpoint,\n\n            CASE\n                WHEN alarme = 1\n                    THEN 'ALERTA'\n                ELSE 'NORMAL'\n            END AS estado,\n\n            CASE\n                WHEN sprinkler = 1\n                    THEN 'ATIVO'\n                ELSE 'INATIVO'\n            END AS sprinkler\n\n        FROM leituras_esp32\n\n        WHERE ${filtroPeriodo}\n\n        ${filtroDispositivo}\n\n        ORDER BY\n            recebido_em DESC\n\n        LIMIT 200;\n    `,\n\n    payload: [\n        ...parametrosConsulta\n    ]\n};\n\n// ------------------------------------------------------------\n// Estado visual da função\n// ------------------------------------------------------------\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text:\n        `${deviceId} | ${descricaoPeriodo}`\n});\n\nreturn [\n    mensagemGrafico,\n    mensagemKPI,\n    mensagemTabela\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 920,
+        "wires": [
+            [
+                "be2422c6c7bd079b"
+            ],
+            [
+                "be2422c6c7bd079b"
+            ],
+            [
+                "be2422c6c7bd079b"
+            ]
+        ]
+    },
+    {
+        "id": "c696649977482ebd",
+        "type": "switch",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "property": "query_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "chart",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "kpi",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 1080,
+        "wires": [
+            [
+                "09b52fd4990d90ea"
+            ],
+            [
+                "785593c94ce947bc"
+            ]
+        ]
+    },
+    {
+        "id": "09b52fd4990d90ea",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Formatar o gráfico de temperatura",
+        "func": "// ============================================================\n// GRÁFICO HISTÓRICO — TEMPERATURA E SETPOINT\n//\n// Cria uma série independente para cada variável:\n//\n// ESP32 #1 - Temperatura\n// ESP32 #1 - Setpoint\n// ESP32 #2 - Temperatura\n// ESP32 #2 - Setpoint\n// ESP32 #3 - Temperatura\n// ESP32 #3 - Setpoint\n// ============================================================\n\nconst linhas = Array.isArray(msg.payload)\n    ? msg.payload\n    : [];\n\nif (linhas.length === 0) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"ring\",\n        text: \"consulta sem registros\"\n    });\n\n    return [[{\n        payload: [],\n        action: \"replace\"\n    }]];\n}\n\n// ============================================================\n// CONFIGURAÇÃO DOS DISPOSITIVOS\n// ============================================================\n\nconst dispositivos = {\n    \"esp32-01\": {\n        nome: \"ESP32 #1\",\n        corTemperatura: \"#1565C0\",\n        corSetpoint: \"#00ACC1\"\n    },\n\n    \"esp32-02\": {\n        nome: \"ESP32 #2\",\n        corTemperatura: \"#2E7D32\",\n        corSetpoint: \"#8BC34A\"\n    },\n\n    \"esp32-03\": {\n        nome: \"ESP32 #3\",\n        corTemperatura: \"#EF6C00\",\n        corSetpoint: \"#8E24AA\"\n    }\n};\n\nconst ordemDispositivos = [\n    \"esp32-01\",\n    \"esp32-02\",\n    \"esp32-03\"\n];\n\n// ============================================================\n// OBJETO PARA SEPARAR OS PONTOS\n// ============================================================\n\nconst dadosPorDispositivo = {};\n\nfor (const deviceId of ordemDispositivos) {\n    dadosPorDispositivo[deviceId] = {\n        temperatura: [],\n        setpoint: []\n    };\n}\n\n// ============================================================\n// DISTRIBUIÇÃO DOS DADOS\n// ============================================================\n\nfor (const linha of linhas) {\n    const deviceId = String(\n        linha.device_id ?? \"\"\n    ).trim();\n\n    if (!dadosPorDispositivo[deviceId]) {\n        continue;\n    }\n\n    const timestamp = Number(\n        linha.timestamp_ms\n    );\n\n    const temperatura = Number(\n        linha.temperatura\n    );\n\n    const setpoint = Number(\n        linha.setpoint\n    );\n\n    if (!Number.isFinite(timestamp)) {\n        continue;\n    }\n\n    if (Number.isFinite(temperatura)) {\n        dadosPorDispositivo[\n            deviceId\n        ].temperatura.push({\n            x: timestamp,\n            y: temperatura\n        });\n    }\n\n    if (Number.isFinite(setpoint)) {\n        dadosPorDispositivo[\n            deviceId\n        ].setpoint.push({\n            x: timestamp,\n            y: setpoint\n        });\n    }\n}\n\n// ============================================================\n// CRIAÇÃO DAS MENSAGENS DAS SÉRIES\n// ============================================================\n\nconst mensagensDados = [];\nconst configuracaoSeries = [];\n\nfor (const deviceId of ordemDispositivos) {\n    const configuracao =\n        dispositivos[deviceId];\n\n    const dados =\n        dadosPorDispositivo[deviceId];\n\n    // Ordena cronologicamente\n    dados.temperatura.sort(\n        (a, b) => a.x - b.x\n    );\n\n    dados.setpoint.sort(\n        (a, b) => a.x - b.x\n    );\n\n    // --------------------------------------------------------\n    // Série de temperatura\n    // --------------------------------------------------------\n\n    if (dados.temperatura.length > 0) {\n        const nomeSerie =\n            `${configuracao.nome} - Temperatura`;\n\n        mensagensDados.push({\n            topic: nomeSerie,\n            payload: dados.temperatura\n        });\n\n        configuracaoSeries.push({\n            name: nomeSerie,\n            type: \"line\",\n\n            lineStyle: {\n                color:\n                    configuracao.corTemperatura,\n                width: 3,\n                type: \"solid\"\n            },\n\n            itemStyle: {\n                color:\n                    configuracao.corTemperatura\n            }\n        });\n    }\n\n    // --------------------------------------------------------\n    // Série de setpoint\n    // --------------------------------------------------------\n\n    if (dados.setpoint.length > 0) {\n        const nomeSerie =\n            `${configuracao.nome} - Setpoint`;\n\n        mensagensDados.push({\n            topic: nomeSerie,\n            payload: dados.setpoint\n        });\n\n        configuracaoSeries.push({\n            name: nomeSerie,\n            type: \"line\",\n\n            lineStyle: {\n                color:\n                    configuracao.corSetpoint,\n                width: 2,\n                type: \"dashed\"\n            },\n\n            itemStyle: {\n                color:\n                    configuracao.corSetpoint\n            }\n        });\n    }\n}\n\n// ============================================================\n// VERIFICAÇÃO DOS RESULTADOS\n// ============================================================\n\nif (mensagensDados.length === 0) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"ring\",\n        text: \"nenhum ponto válido\"\n    });\n\n    return [[{\n        payload: [],\n        action: \"replace\"\n    }]];\n}\n\n// ============================================================\n// AÇÃO DE ATUALIZAÇÃO DO GRÁFICO\n// ============================================================\n\nmensagensDados.forEach(\n    (mensagem, indice) => {\n        /*\n         * A primeira série limpa o gráfico.\n         * As demais são adicionadas posteriormente.\n         */\n        mensagem.action =\n            indice === 0\n                ? \"replace\"\n                : \"append\";\n    }\n);\n\n// ============================================================\n// CONFIGURAÇÃO VISUAL DAS SÉRIES\n// ============================================================\n\nconst mensagemConfiguracao = {\n    ui_update: {\n        chartOptions: {\n            series: configuracaoSeries\n        }\n    }\n};\n\n// ============================================================\n// STATUS DO NÓ\n// ============================================================\n\nconst totalPontos =\n    mensagensDados.reduce(\n        (soma, mensagem) =>\n            soma + mensagem.payload.length,\n        0\n    );\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text:\n        `${mensagensDados.length} séries | ` +\n        `${totalPontos} pontos`\n});\n\n// Uma saída, com várias mensagens sequenciais\nreturn [[\n    mensagemConfiguracao,\n    ...mensagensDados\n]];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 1020,
+        "wires": [
+            [
+                "0e8f2d8971cc97f8"
+            ]
+        ]
+    },
+    {
+        "id": "0e8f2d8971cc97f8",
+        "type": "ui-chart",
+        "z": "39b0d48024e4df0e",
+        "group": "c2e11a11232cfca3",
+        "name": "",
+        "label": "Temperatura e Setpoint",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "{dd}/{MM} {HH}:{mm}",
+        "xAxisFormatType": "custom",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": "",
+        "showLegend": true,
+        "removeOlder": "0",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "12",
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1710,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "785593c94ce947bc",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "KPIs",
+        "func": "// ============================================================\n// FORMATAR INDICADORES\n// ============================================================\n\nconst linha =\n    Array.isArray(msg.payload) &&\n        msg.payload.length > 0\n        ? msg.payload[0]\n        : null;\n\nif (!linha) {\n    return [\n        { payload: \"--\" },\n        { payload: \"--\" },\n        { payload: \"--\" },\n        { payload: \"--\" }\n    ];\n}\n\nfunction temperatura(valor) {\n    const numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? `${numero.toFixed(1)} °C`\n        : \"--\";\n}\n\nfunction percentual(valor) {\n    const numero = Number(valor);\n\n    return Number.isFinite(numero)\n        ? `${numero.toFixed(1)} %`\n        : \"--\";\n}\n\nreturn [\n    {\n        payload:\n            temperatura(\n                linha.temperatura_minima\n            )\n    },\n    {\n        payload:\n            temperatura(\n                linha.temperatura_media\n            )\n    },\n    {\n        payload:\n            temperatura(\n                linha.temperatura_maxima\n            )\n    },\n    {\n        payload:\n            percentual(\n                linha.percentual_alerta\n            )\n    }\n];",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 1160,
+        "wires": [
+            [
+                "5232d4a15e6bf20a"
+            ],
+            [
+                "04493c5df5d29b2d"
+            ],
+            [
+                "dc2496004e699a82"
+            ],
+            [
+                "6b5481d82c4f1bdb"
+            ]
+        ]
+    },
+    {
+        "id": "5232d4a15e6bf20a",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "01697f6c16070624",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Temperatura mínima",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1580,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "04493c5df5d29b2d",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "01697f6c16070624",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Temperatura média",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1570,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "dc2496004e699a82",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "01697f6c16070624",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Temperatura máxima",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1580,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "6b5481d82c4f1bdb",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "01697f6c16070624",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "Tempo relativo em alerta",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1590,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "be2422c6c7bd079b",
+        "type": "mysql",
+        "z": "39b0d48024e4df0e",
+        "mydb": "f4cccf14bcfd77a9",
+        "name": "BD Análises",
+        "x": 890,
+        "y": 920,
+        "wires": [
+            [
+                "c696649977482ebd",
+                "fe7aecf6509eb578"
+            ]
+        ]
+    },
+    {
+        "id": "a5b8a725a67adc52",
+        "type": "mysql",
+        "z": "39b0d48024e4df0e",
+        "mydb": "f4cccf14bcfd77a9",
+        "name": "BD Historicos",
+        "x": 980,
+        "y": 380,
+        "wires": [
+            [
+                "601389b7429850f1"
+            ]
+        ]
+    },
+    {
+        "id": "6cc79e66ddb82b5f",
+        "type": "catch",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "scope": [
+            "be2422c6c7bd079b",
+            "a5b8a725a67adc52"
+        ],
+        "uncaught": false,
+        "x": 300,
+        "y": 1000,
+        "wires": [
+            [
+                "f3166c6c0f300ce0"
+            ]
+        ]
+    },
+    {
+        "id": "f3166c6c0f300ce0",
+        "type": "debug",
+        "z": "39b0d48024e4df0e",
+        "name": "erros SQL",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "fe7aecf6509eb578",
+        "type": "debug",
+        "z": "39b0d48024e4df0e",
+        "name": "debug BD Análises",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "cb6764a736d3ce64",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Setpoint",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "82e0c1941b401b5e",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Splinkler",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "46b2a4c1a203abbe",
+        "type": "ui-number-input",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "name": "",
+        "label": "Novo setpoint",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "thermometer-chevron-up",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 1380,
+        "y": 1640,
+        "wires": [
+            [
+                "154049e2bc49dc05"
+            ]
+        ]
+    },
+    {
+        "id": "9a87ec1312de4138",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "name": "",
+        "label": "Aplicar",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check",
+        "iconPosition": "left",
+        "payload": "esp32-01",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#0F2742",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1350,
+        "y": 1680,
+        "wires": [
+            [
+                "258363297ee46dc8"
+            ]
+        ]
+    },
+    {
+        "id": "9798abd003d9cfd8",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "name": "",
+        "label": "EMERGÊNCIA",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "alert",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-01\",   \"command\": \"alarm\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#C62828",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1380,
+        "y": 1720,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "1e4dbf56fd5695ea",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "name": "",
+        "label": "NORMAL",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check-circle",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-01\",   \"command\": \"reset\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#2E7D32",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1360,
+        "y": 1760,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "812c74260bb01a55",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Setpoint",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "381c9acef0a53b35",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Splinkler",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "68e5b6101fc0fdc8",
+        "type": "ui-number-input",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "name": "",
+        "label": "Novo setpoint",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "thermometer-chevron-up",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 1380,
+        "y": 2080,
+        "wires": [
+            [
+                "d4663cd5754c0dff"
+            ]
+        ]
+    },
+    {
+        "id": "6ea609654a2e949f",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "name": "",
+        "label": "Aplicar",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check",
+        "iconPosition": "left",
+        "payload": "esp32-02",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#0F2742",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1350,
+        "y": 2120,
+        "wires": [
+            [
+                "15763912716d97ee"
+            ]
+        ]
+    },
+    {
+        "id": "20a639215082fc34",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "name": "",
+        "label": "EMERGÊNCIA",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "alert",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-02\",   \"command\": \"alarm\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#C62828",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1380,
+        "y": 2160,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "1a64f9141358bcbb",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "name": "",
+        "label": "NORMAL",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check-circle",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-02\",   \"command\": \"reset\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#2E7D32",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1360,
+        "y": 2200,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "64c110781b641167",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Setpoint",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "766ed70bbafadbbf",
+        "type": "ui-text",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Splinkler",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1360,
+        "y": 2480,
+        "wires": []
+    },
+    {
+        "id": "c79871612f1f60ee",
+        "type": "ui-number-input",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "name": "",
+        "label": "Novo setpoint",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "tooltip": "",
+        "delay": "300",
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "thermometer-chevron-up",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 1380,
+        "y": 2520,
+        "wires": [
+            [
+                "b2c3f36f9d27553a"
+            ]
+        ]
+    },
+    {
+        "id": "9bc47c941042c4d3",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "name": "",
+        "label": "Aplicar",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check",
+        "iconPosition": "left",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#0F2742",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1350,
+        "y": 2560,
+        "wires": [
+            [
+                "f53490db6086494a"
+            ]
+        ]
+    },
+    {
+        "id": "3ecbaf740ff95302",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "name": "",
+        "label": "EMERGÊNCIA",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "alert",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-03\",   \"command\": \"alarm\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#C62828",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1380,
+        "y": 2600,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "d6add9cd39648136",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "name": "",
+        "label": "NORMAL",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check-circle",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"esp32-03\",   \"command\": \"reset\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#2E7D32",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1360,
+        "y": 2640,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "43b3ef6977c096d1",
+        "type": "mqtt in",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "topic": "ESP32/+/status",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "bacc3f750c5d42b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 1480,
+        "wires": [
+            [
+                "0e9e233c7f729f8d"
+            ]
+        ]
+    },
+    {
+        "id": "0e9e233c7f729f8d",
+        "type": "json",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 490,
+        "y": 1480,
+        "wires": [
+            [
+                "b8ac46b815199297"
+            ]
+        ]
+    },
+    {
+        "id": "b8ac46b815199297",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Separar dispositivos",
+        "func": "// ============================================================\n// SEPARA AS MENSAGENS DOS TRÊS ESP32\n// ============================================================\n\nconst dados = msg.payload;\n\nif (\n    dados === null ||\n    typeof dados !== \"object\" ||\n    Array.isArray(dados)\n) {\n    node.warn(\"Payload recebido não é um objeto JSON.\");\n    return [null, null, null];\n}\n\n// Obtém o identificador pelo JSON\nlet deviceId = String(\n    dados.device_id || \"\"\n).trim();\n\n// Caso não exista no JSON, tenta obter pelo tópico MQTT\nif (deviceId === \"\") {\n    const resultado = /^ESP32\\/([^/]+)\\/status$/.exec(\n        String(msg.topic || \"\")\n    );\n\n    if (resultado) {\n        deviceId = resultado[1];\n    }\n}\n\nif (deviceId === \"\") {\n    node.warn(\"Não foi possível identificar o ESP32.\");\n    return [null, null, null];\n}\n\n// Normalização dos dados\nmsg.device_id = deviceId;\n\nmsg.payload = {\n    device_id: deviceId,\n\n    temperature: Number(dados.temperature),\n\n    setpoint: Number(\n        dados.setpoint ??\n        dados.threshold ??\n        60\n    ),\n\n    alarm:\n        Number(dados.alarm) === 1\n            ? 1\n            : 0,\n\n    sprinkler:\n        Number(dados.sprinkler) === 1\n            ? 1\n            : 0,\n\n    state:\n        String(\n            dados.state || \"desconhecido\"\n        ),\n\n    wifi_rssi:\n        Number(dados.wifi_rssi),\n\n    received_at:\n        Date.now()\n};\n\n// Distribuição pelas três saídas\nswitch (deviceId) {\n    case \"esp32-01\":\n        return [msg, null, null];\n\n    case \"esp32-02\":\n        return [null, msg, null];\n\n    case \"esp32-03\":\n        return [null, null, msg];\n\n    default:\n        node.warn(\n            `Dispositivo não cadastrado: ${deviceId}`\n        );\n\n        return [null, null, null];\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1480,
+        "wires": [
+            [
+                "6eac37306d1ba78e"
+            ],
+            [
+                "46b81acb18109cd3"
+            ],
+            [
+                "996af9c3cd379dd9"
+            ]
+        ]
+    },
+    {
+        "id": "6eac37306d1ba78e",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Widgets ESP32-01",
+        "func": "// ============================================================\n// PREPARA OS WIDGETS DO ESP32\n//\n// Saída 1: Gauge de temperatura\n// Saída 2: Estado geral\n// Saída 3: Setpoint atual\n// Saída 4: Estado do sprinkler\n// Saída 5: Entrada numérica do setpoint\n// ============================================================\n\nconst dados = msg.payload;\n\nconst temperatura =\n    Number(dados.temperature);\n\nconst setpoint =\n    Number(dados.setpoint);\n\nif (\n    !Number.isFinite(temperatura) ||\n    !Number.isFinite(setpoint)\n) {\n    node.warn(\n        \"Temperatura ou setpoint inválido.\"\n    );\n\n    return [\n        null,\n        null,\n        null,\n        null,\n        null\n    ];\n}\n\n// A faixa de atenção começa 10 °C antes do setpoint\nconst inicioAtencao =\n    Math.max(0, setpoint - 10);\n\n// Gauge\nconst gauge = {\n    payload: temperatura,\n\n    ui_update: {\n        min: 0,\n        max: 100,\n\n        segments: [\n            {\n                from: 0,\n                color: \"#2E7D32\"\n            },\n            {\n                from: inicioAtencao,\n                color: \"#F9A825\"\n            },\n            {\n                from: setpoint,\n                color: \"#C62828\"\n            }\n        ]\n    }\n};\n\n// Estado geral\nconst estado = {\n    payload:\n        dados.alarm === 1\n            ? \"ALERTA\"\n            : \"NORMAL\"\n};\n\n// Setpoint exibido\nconst setpointTexto = {\n    payload:\n        `${setpoint.toFixed(1)} °C`\n};\n\n// Estado do sprinkler\nconst sprinkler = {\n    payload:\n        dados.sprinkler === 1\n            ? \"ATIVO\"\n            : \"INATIVO\"\n};\n\n// Atualiza o campo de entrada com o setpoint atual\nconst setpointEntrada = {\n    payload: setpoint\n};\n\nreturn [\n    gauge,\n    estado,\n    setpointTexto,\n    sprinkler,\n    setpointEntrada\n];",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 1460,
+        "wires": [
+            [
+                "b248f56fb786d8e1"
+            ],
+            [
+                "6f64197a3de94222"
+            ],
+            [
+                "cb6764a736d3ce64"
+            ],
+            [
+                "82e0c1941b401b5e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2e6f8269b58728ed",
+        "type": "ui-gauge",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "group": "2f0cae2d5d0f835e",
+        "order": 3,
+        "value": "$round(payload, 1)",
+        "valueType": "jsonata",
+        "width": "4",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "thermometer",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1370,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b248f56fb786d8e1",
+        "type": "ui-gauge",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "group": "a62a6cdfe28c2ff6",
+        "order": 3,
+        "value": "$round(payload, 1)",
+        "valueType": "jsonata",
+        "width": "4",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "thermometer",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1370,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3eeb971e0da42b34",
+        "type": "ui-gauge",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "group": "fa4411529c15919b",
+        "order": 3,
+        "value": "$round(payload, 1)",
+        "valueType": "jsonata",
+        "width": "4",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "thermometer",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1370,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46b81acb18109cd3",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Widgets ESP32-02",
+        "func": "// ============================================================\n// PREPARA OS WIDGETS DO ESP32\n//\n// Saída 1: Gauge de temperatura\n// Saída 2: Estado geral\n// Saída 3: Setpoint atual\n// Saída 4: Estado do sprinkler\n// Saída 5: Entrada numérica do setpoint\n// ============================================================\n\nconst dados = msg.payload;\n\nconst temperatura =\n    Number(dados.temperature);\n\nconst setpoint =\n    Number(dados.setpoint);\n\nif (\n    !Number.isFinite(temperatura) ||\n    !Number.isFinite(setpoint)\n) {\n    node.warn(\n        \"Temperatura ou setpoint inválido.\"\n    );\n\n    return [\n        null,\n        null,\n        null,\n        null,\n        null\n    ];\n}\n\n// A faixa de atenção começa 10 °C antes do setpoint\nconst inicioAtencao =\n    Math.max(0, setpoint - 10);\n\n// Gauge\nconst gauge = {\n    payload: temperatura,\n\n    ui_update: {\n        min: 0,\n        max: 100,\n\n        segments: [\n            {\n                from: 0,\n                color: \"#2E7D32\"\n            },\n            {\n                from: inicioAtencao,\n                color: \"#F9A825\"\n            },\n            {\n                from: setpoint,\n                color: \"#C62828\"\n            }\n        ]\n    }\n};\n\n// Estado geral\nconst estado = {\n    payload:\n        dados.alarm === 1\n            ? \"ALERTA\"\n            : \"NORMAL\"\n};\n\n// Setpoint exibido\nconst setpointTexto = {\n    payload:\n        `${setpoint.toFixed(1)} °C`\n};\n\n// Estado do sprinkler\nconst sprinkler = {\n    payload:\n        dados.sprinkler === 1\n            ? \"ATIVO\"\n            : \"INATIVO\"\n};\n\n// Atualiza o campo de entrada com o setpoint atual\nconst setpointEntrada = {\n    payload: setpoint\n};\n\nreturn [\n    gauge,\n    estado,\n    setpointTexto,\n    sprinkler,\n    setpointEntrada\n];",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 1900,
+        "wires": [
+            [
+                "2e6f8269b58728ed"
+            ],
+            [
+                "18412ef652196a7e"
+            ],
+            [
+                "812c74260bb01a55"
+            ],
+            [
+                "381c9acef0a53b35"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "996af9c3cd379dd9",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Widgets ESP32-03",
+        "func": "// ============================================================\n// PREPARA OS WIDGETS DO ESP32\n//\n// Saída 1: Gauge de temperatura\n// Saída 2: Estado geral\n// Saída 3: Setpoint atual\n// Saída 4: Estado do sprinkler\n// Saída 5: Entrada numérica do setpoint\n// ============================================================\n\nconst dados = msg.payload;\n\nconst temperatura =\n    Number(dados.temperature);\n\nconst setpoint =\n    Number(dados.setpoint);\n\nif (\n    !Number.isFinite(temperatura) ||\n    !Number.isFinite(setpoint)\n) {\n    node.warn(\n        \"Temperatura ou setpoint inválido.\"\n    );\n\n    return [\n        null,\n        null,\n        null,\n        null,\n        null\n    ];\n}\n\n// A faixa de atenção começa 10 °C antes do setpoint\nconst inicioAtencao =\n    Math.max(0, setpoint - 10);\n\n// Gauge\nconst gauge = {\n    payload: temperatura,\n\n    ui_update: {\n        min: 0,\n        max: 100,\n\n        segments: [\n            {\n                from: 0,\n                color: \"#2E7D32\"\n            },\n            {\n                from: inicioAtencao,\n                color: \"#F9A825\"\n            },\n            {\n                from: setpoint,\n                color: \"#C62828\"\n            }\n        ]\n    }\n};\n\n// Estado geral\nconst estado = {\n    payload:\n        dados.alarm === 1\n            ? \"ALERTA\"\n            : \"NORMAL\"\n};\n\n// Setpoint exibido\nconst setpointTexto = {\n    payload:\n        `${setpoint.toFixed(1)} °C`\n};\n\n// Estado do sprinkler\nconst sprinkler = {\n    payload:\n        dados.sprinkler === 1\n            ? \"ATIVO\"\n            : \"INATIVO\"\n};\n\n// Atualiza o campo de entrada com o setpoint atual\nconst setpointEntrada = {\n    payload: setpoint\n};\n\nreturn [\n    gauge,\n    estado,\n    setpointTexto,\n    sprinkler,\n    setpointEntrada\n];",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 2340,
+        "wires": [
+            [
+                "3eeb971e0da42b34"
+            ],
+            [
+                "d68e10b366ebfea6"
+            ],
+            [
+                "64c110781b641167"
+            ],
+            [
+                "766ed70bbafadbbf"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "df5347730cb576f6",
+        "type": "mqtt in",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "topic": "ESP32/+/availability",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "bacc3f750c5d42b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 1760,
+        "wires": [
+            [
+                "df495a05540e2952"
+            ]
+        ]
+    },
+    {
+        "id": "df495a05540e2952",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Disponibilidade ESP32",
+        "func": "const topico = String(\n    msg.topic || \"\"\n);\n\nconst resultado =\n    /^ESP32\\/([^/]+)\\/availability$/.exec(\n        topico\n    );\n\nif (!resultado) {\n    return [null, null, null];\n}\n\nconst deviceId = resultado[1];\n\nconst valor = String(\n    msg.payload || \"\"\n)\n    .trim()\n    .toLowerCase();\n\nmsg.payload =\n    valor === \"online\"\n        ? \"ONLINE\"\n        : \"OFFLINE\";\n\nswitch (deviceId) {\n    case \"esp32-01\":\n        return [msg, null, null];\n\n    case \"esp32-02\":\n        return [null, msg, null];\n\n    case \"esp32-03\":\n        return [null, null, msg];\n\n    default:\n        return [null, null, null];\n}",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1760,
+        "wires": [
+            [
+                "46ab70debe582cd1"
+            ],
+            [
+                "534bdeebdb550471"
+            ],
+            [
+                "40dc35d4cede25ac"
+            ]
+        ]
+    },
+    {
+        "id": "3f35b02c3ef3edd8",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Preparar comando MQTT",
+        "func": "let comando = msg.payload;\n\n// Permite receber JSON em formato de texto\nif (typeof comando === \"string\") {\n    try {\n        comando = JSON.parse(comando);\n    } catch (erro) {\n        node.warn(\n            \"Payload do comando não é um JSON válido.\"\n        );\n\n        return null;\n    }\n}\n\nif (\n    comando === null ||\n    typeof comando !== \"object\"\n) {\n    node.warn(\n        \"Estrutura do comando inválida.\"\n    );\n\n    return null;\n}\n\nconst alvo = String(\n    comando.target || \"\"\n);\n\nconst tipoComando = String(\n    comando.command || \"\"\n);\n\nconst valor = Number(\n    comando.value\n);\n\nconst alvosPermitidos = [\n    \"esp32-01\",\n    \"esp32-02\",\n    \"esp32-03\",\n    \"all\"\n];\n\nconst comandosPermitidos = [\n    \"alarm\",\n    \"reset\",\n    \"setpoint\"\n];\n\nif (!alvosPermitidos.includes(alvo)) {\n    node.warn(\n        `Destino inválido: ${alvo}`\n    );\n\n    return null;\n}\n\nif (\n    !comandosPermitidos.includes(\n        tipoComando\n    )\n) {\n    node.warn(\n        `Comando inválido: ${tipoComando}`\n    );\n\n    return null;\n}\n\n// Define o tópico individual ou geral\nmsg.topic =\n    `ESP32/${alvo}/command`;\n\n// O ESP32 espera uma string JSON\nmsg.payload = JSON.stringify({\n    command: tipoComando,\n    value: valor\n});\n\n// Comandos não devem ser retidos\nmsg.retain = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2450,
+        "y": 2020,
+        "wires": [
+            [
+                "dd80afdb65190fe1",
+                "16c8c0caf69e684b"
+            ]
+        ]
+    },
+    {
+        "id": "c221046911a69629",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "1071ef7c228a2f38",
+        "name": "",
+        "label": "EMERGÊNCIA GERAL",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "alert-octagon",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"all\",   \"command\": \"alarm\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#C62828",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 2090,
+        "y": 1460,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "e16235fa99927f33",
+        "type": "ui-button",
+        "z": "39b0d48024e4df0e",
+        "group": "1071ef7c228a2f38",
+        "name": "",
+        "label": "OPERAÇÃO NORMAL GERAL",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "check-circle",
+        "iconPosition": "left",
+        "payload": "{   \"target\": \"all\",   \"command\": \"reset\",   \"value\": 1 }",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#2E7D32",
+        "textColor": "#FFFFFF",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 2110,
+        "y": 1500,
+        "wires": [
+            [
+                "3f35b02c3ef3edd8"
+            ]
+        ]
+    },
+    {
+        "id": "dd80afdb65190fe1",
+        "type": "mqtt out",
+        "z": "39b0d48024e4df0e",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bacc3f750c5d42b9",
+        "x": 2710,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "16c8c0caf69e684b",
+        "type": "debug",
+        "z": "39b0d48024e4df0e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2700,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "b2c3f36f9d27553a",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Guardar setpoint ESP32-03",
+        "func": "const valor = Number(msg.payload);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"valor inválido\"\n    });\n\n    node.warn(\"Setpoint inválido.\");\n    return null;\n}\n\nif (valor < 0 || valor > 100) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"fora da faixa\"\n    });\n\n    node.warn(\"O setpoint deve estar entre 0 e 100 °C.\");\n    return null;\n}\n\n// Armazena o valor digitado\nflow.set(\"setpoint_esp32_03\", valor);\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C armazenado`\n});\n\n// Não encaminha mensagem ao MQTT neste momento\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 2520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f53490db6086494a",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Enviar setpoint ESP32-03",
+        "func": "const valor = Number(\n    flow.get(\"setpoint_esp32_03\")\n);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"setpoint não informado\"\n    });\n\n    node.warn(\n        \"Digite um valor no campo de setpoint antes de pressionar Aplicar.\"\n    );\n\n    return null;\n}\n\n// Tópico individual do ESP32 CYD\nmsg.topic = \"ESP32/esp32-03/command\";\n\n// JSON esperado pelo ESP32\nmsg.payload = JSON.stringify({\n    command: \"setpoint\",\n    value: valor\n});\n\nmsg.qos = 0;\nmsg.retain = false;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C enviado`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 2560,
+        "wires": [
+            [
+                "dd80afdb65190fe1"
+            ]
+        ]
+    },
+    {
+        "id": "d4663cd5754c0dff",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Guardar setpoint ESP32-02",
+        "func": "const valor = Number(msg.payload);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"valor inválido\"\n    });\n\n    node.warn(\"Setpoint inválido.\");\n    return null;\n}\n\nif (valor < 0 || valor > 100) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"fora da faixa\"\n    });\n\n    node.warn(\"O setpoint deve estar entre 0 e 100 °C.\");\n    return null;\n}\n\n// Armazena o valor digitado\nflow.set(\"setpoint_esp32_02\", valor);\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C armazenado`\n});\n\n// Não encaminha mensagem ao MQTT neste momento\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15763912716d97ee",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Enviar setpoint ESP32-02",
+        "func": "const valor = Number(\n    flow.get(\"setpoint_esp32_02\")\n);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"setpoint não informado\"\n    });\n\n    node.warn(\n        \"Digite um valor no campo de setpoint antes de pressionar Aplicar.\"\n    );\n\n    return null;\n}\n\n// Tópico individual do ESP32 CYD\nmsg.topic = \"ESP32/esp32-02/command\";\n\n// JSON esperado pelo ESP32\nmsg.payload = JSON.stringify({\n    command: \"setpoint\",\n    value: valor\n});\n\nmsg.qos = 0;\nmsg.retain = false;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C enviado`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 2220,
+        "wires": [
+            [
+                "dd80afdb65190fe1"
+            ]
+        ]
+    },
+    {
+        "id": "258363297ee46dc8",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Enviar setpoint ESP32-01",
+        "func": "const valor = Number(\n    flow.get(\"setpoint_esp32_01\")\n);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"setpoint não informado\"\n    });\n\n    node.warn(\n        \"Digite um valor no campo de setpoint antes de pressionar Aplicar.\"\n    );\n\n    return null;\n}\n\n// Tópico individual do ESP32 CYD\nmsg.topic = \"ESP32/esp32-01/command\";\n\n// JSON esperado pelo ESP32\nmsg.payload = JSON.stringify({\n    command: \"setpoint\",\n    value: valor\n});\n\nmsg.qos = 0;\nmsg.retain = false;\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C enviado`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 1680,
+        "wires": [
+            [
+                "dd80afdb65190fe1"
+            ]
+        ]
+    },
+    {
+        "id": "154049e2bc49dc05",
+        "type": "function",
+        "z": "39b0d48024e4df0e",
+        "name": "Guardar setpoint ESP32-01",
+        "func": "const valor = Number(msg.payload);\n\nif (!Number.isFinite(valor)) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"valor inválido\"\n    });\n\n    node.warn(\"Setpoint inválido.\");\n    return null;\n}\n\nif (valor < 0 || valor > 100) {\n    node.status({\n        fill: \"red\",\n        shape: \"ring\",\n        text: \"fora da faixa\"\n    });\n\n    node.warn(\"O setpoint deve estar entre 0 e 100 °C.\");\n    return null;\n}\n\n// Armazena o valor digitado\nflow.set(\"setpoint_esp32_01\", valor);\n\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: `${valor.toFixed(1)} °C armazenado`\n});\n\n// Não encaminha mensagem ao MQTT neste momento\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "534bdeebdb550471",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "page": "",
+        "ui": "",
+        "name": "Comunicação Visual ESP32-02",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-status\"\n        :class=\"isOnline ? 'fw-online' : 'fw-offline'\"\n    >\n        <span class=\"fw-status-dot\"></span>\n\n        <span class=\"fw-status-label\">\n            COMUNICAÇÃO\n        </span>\n\n        <span class=\"fw-status-value\">\n            {{ isOnline ? \"ONLINE\" : \"OFFLINE\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"OFFLINE\")\n                .trim()\n                .toUpperCase()\n        },\n\n        isOnline() {\n            return this.normalizedValue === \"ONLINE\"\n        }\n    }\n}\n</script>\n\n<style>\n.fw-status {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-status-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-status-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-status-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* ONLINE */\n\n.fw-online {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-online .fw-status-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-online .fw-status-label {\n    color: #54715b;\n}\n\n.fw-online .fw-status-value {\n    color: #1b5e20;\n}\n\n/* OFFLINE */\n\n.fw-offline {\n    background: #f2f3f5;\n    border-color: #c9cdd2;\n}\n\n.fw-offline .fw-status-dot {\n    background: #70757a;\n}\n\n.fw-offline .fw-status-label {\n    color: #777d84;\n}\n\n.fw-offline .fw-status-value {\n    color: #4d5156;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1430,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18412ef652196a7e",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "2f0cae2d5d0f835e",
+        "page": "",
+        "ui": "",
+        "name": "estadoESP32-02",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-state\"\n        :class=\"isAlert ? 'fw-state-alert' : 'fw-state-normal'\"\n    >\n        <span class=\"fw-state-dot\"></span>\n\n        <span class=\"fw-state-label\">\n            ESTADO\n        </span>\n\n        <span class=\"fw-state-value\">\n            {{ isAlert ? \"ALERTA\" : \"NORMAL\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"NORMAL\")\n                .trim()\n                .toUpperCase()\n                .replaceAll(\"_\", \" \")\n        },\n\n        isAlert() {\n            return [\n                \"ALERTA\",\n                \"EMERGÊNCIA\",\n                \"EMERGENCIA\",\n                \"EM ALARME\",\n                \"RISCO INCENDIO\",\n                \"RISCO DE INCENDIO\"\n            ].includes(this.normalizedValue)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-state {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-state-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-state-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-state-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* NORMAL */\n\n.fw-state-normal {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-state-normal .fw-state-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-state-normal .fw-state-label {\n    color: #54715b;\n}\n\n.fw-state-normal .fw-state-value {\n    color: #1b5e20;\n}\n\n/* ALERTA */\n\n.fw-state-alert {\n    background: #fff0f0;\n    border-color: #efaaaa;\n}\n\n.fw-state-alert .fw-state-dot {\n    background: #c62828;\n    box-shadow: 0 0 7px rgba(198, 40, 40, 0.55);\n\n    animation: fwPulse 1.2s infinite;\n}\n\n.fw-state-alert .fw-state-label {\n    color: #a55252;\n}\n\n.fw-state-alert .fw-state-value {\n    color: #b71c1c;\n}\n\n@keyframes fwPulse {\n    0% {\n        transform: scale(1);\n        opacity: 1;\n    }\n\n    50% {\n        transform: scale(1.3);\n        opacity: 0.55;\n    }\n\n    100% {\n        transform: scale(1);\n        opacity: 1;\n    }\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1390,
+        "y": 1960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46ab70debe582cd1",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "page": "",
+        "ui": "",
+        "name": "Comunicação Visual ESP32-01",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-status\"\n        :class=\"isOnline ? 'fw-online' : 'fw-offline'\"\n    >\n        <span class=\"fw-status-dot\"></span>\n\n        <span class=\"fw-status-label\">\n            COMUNICAÇÃO\n        </span>\n\n        <span class=\"fw-status-value\">\n            {{ isOnline ? \"ONLINE\" : \"OFFLINE\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"OFFLINE\")\n                .trim()\n                .toUpperCase()\n        },\n\n        isOnline() {\n            return this.normalizedValue === \"ONLINE\"\n        }\n    }\n}\n</script>\n\n<style>\n.fw-status {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-status-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-status-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-status-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* ONLINE */\n\n.fw-online {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-online .fw-status-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-online .fw-status-label {\n    color: #54715b;\n}\n\n.fw-online .fw-status-value {\n    color: #1b5e20;\n}\n\n/* OFFLINE */\n\n.fw-offline {\n    background: #f2f3f5;\n    border-color: #c9cdd2;\n}\n\n.fw-offline .fw-status-dot {\n    background: #70757a;\n}\n\n.fw-offline .fw-status-label {\n    color: #777d84;\n}\n\n.fw-offline .fw-status-value {\n    color: #4d5156;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1430,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f64197a3de94222",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "a62a6cdfe28c2ff6",
+        "page": "",
+        "ui": "",
+        "name": "estadoESP32-01",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-state\"\n        :class=\"isAlert ? 'fw-state-alert' : 'fw-state-normal'\"\n    >\n        <span class=\"fw-state-dot\"></span>\n\n        <span class=\"fw-state-label\">\n            ESTADO\n        </span>\n\n        <span class=\"fw-state-value\">\n            {{ isAlert ? \"ALERTA\" : \"NORMAL\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"NORMAL\")\n                .trim()\n                .toUpperCase()\n                .replaceAll(\"_\", \" \")\n        },\n\n        isAlert() {\n            return [\n                \"ALERTA\",\n                \"EMERGÊNCIA\",\n                \"EMERGENCIA\",\n                \"EM ALARME\",\n                \"RISCO INCENDIO\",\n                \"RISCO DE INCENDIO\"\n            ].includes(this.normalizedValue)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-state {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-state-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-state-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-state-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* NORMAL */\n\n.fw-state-normal {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-state-normal .fw-state-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-state-normal .fw-state-label {\n    color: #54715b;\n}\n\n.fw-state-normal .fw-state-value {\n    color: #1b5e20;\n}\n\n/* ALERTA */\n\n.fw-state-alert {\n    background: #fff0f0;\n    border-color: #efaaaa;\n}\n\n.fw-state-alert .fw-state-dot {\n    background: #c62828;\n    box-shadow: 0 0 7px rgba(198, 40, 40, 0.55);\n\n    animation: fwPulse 1.2s infinite;\n}\n\n.fw-state-alert .fw-state-label {\n    color: #a55252;\n}\n\n.fw-state-alert .fw-state-value {\n    color: #b71c1c;\n}\n\n@keyframes fwPulse {\n    0% {\n        transform: scale(1);\n        opacity: 1;\n    }\n\n    50% {\n        transform: scale(1.3);\n        opacity: 0.55;\n    }\n\n    100% {\n        transform: scale(1);\n        opacity: 1;\n    }\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1390,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40dc35d4cede25ac",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "page": "",
+        "ui": "",
+        "name": "Comunicação Visual ESP32-01",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-status\"\n        :class=\"isOnline ? 'fw-online' : 'fw-offline'\"\n    >\n        <span class=\"fw-status-dot\"></span>\n\n        <span class=\"fw-status-label\">\n            COMUNICAÇÃO\n        </span>\n\n        <span class=\"fw-status-value\">\n            {{ isOnline ? \"ONLINE\" : \"OFFLINE\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"OFFLINE\")\n                .trim()\n                .toUpperCase()\n        },\n\n        isOnline() {\n            return this.normalizedValue === \"ONLINE\"\n        }\n    }\n}\n</script>\n\n<style>\n.fw-status {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-status-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-status-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-status-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* ONLINE */\n\n.fw-online {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-online .fw-status-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-online .fw-status-label {\n    color: #54715b;\n}\n\n.fw-online .fw-status-value {\n    color: #1b5e20;\n}\n\n/* OFFLINE */\n\n.fw-offline {\n    background: #f2f3f5;\n    border-color: #c9cdd2;\n}\n\n.fw-offline .fw-status-dot {\n    background: #70757a;\n}\n\n.fw-offline .fw-status-label {\n    color: #777d84;\n}\n\n.fw-offline .fw-status-value {\n    color: #4d5156;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1430,
+        "y": 2320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d68e10b366ebfea6",
+        "type": "ui-template",
+        "z": "39b0d48024e4df0e",
+        "group": "fa4411529c15919b",
+        "page": "",
+        "ui": "",
+        "name": "estadoESP32-03",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n    <div\n        class=\"fw-state\"\n        :class=\"isAlert ? 'fw-state-alert' : 'fw-state-normal'\"\n    >\n        <span class=\"fw-state-dot\"></span>\n\n        <span class=\"fw-state-label\">\n            ESTADO\n        </span>\n\n        <span class=\"fw-state-value\">\n            {{ isAlert ? \"ALERTA\" : \"NORMAL\" }}\n        </span>\n    </div>\n</template>\n\n<script>\nexport default {\n    computed: {\n        normalizedValue() {\n            return String(this.msg?.payload ?? \"NORMAL\")\n                .trim()\n                .toUpperCase()\n                .replaceAll(\"_\", \" \")\n        },\n\n        isAlert() {\n            return [\n                \"ALERTA\",\n                \"EMERGÊNCIA\",\n                \"EMERGENCIA\",\n                \"EM ALARME\",\n                \"RISCO INCENDIO\",\n                \"RISCO DE INCENDIO\"\n            ].includes(this.normalizedValue)\n        }\n    }\n}\n</script>\n\n<style>\n.fw-state {\n    width: 100%;\n    height: 100%;\n    min-height: 34px;\n\n    display: flex;\n    align-items: center;\n\n    gap: 6px;\n    padding: 4px 8px;\n\n    border: 1px solid;\n    border-radius: 8px;\n\n    box-sizing: border-box;\n    overflow: hidden;\n}\n\n.fw-state-dot {\n    width: 8px;\n    height: 8px;\n\n    border-radius: 50%;\n    flex: 0 0 auto;\n}\n\n.fw-state-label {\n    font-size: 8px;\n    font-weight: 700;\n    letter-spacing: 0.3px;\n\n    white-space: nowrap;\n}\n\n.fw-state-value {\n    margin-left: auto;\n\n    font-size: 10px;\n    font-weight: 800;\n\n    white-space: nowrap;\n}\n\n/* NORMAL */\n\n.fw-state-normal {\n    background: #edf8f0;\n    border-color: #a8d5b3;\n}\n\n.fw-state-normal .fw-state-dot {\n    background: #2e7d32;\n    box-shadow: 0 0 6px rgba(46, 125, 50, 0.45);\n}\n\n.fw-state-normal .fw-state-label {\n    color: #54715b;\n}\n\n.fw-state-normal .fw-state-value {\n    color: #1b5e20;\n}\n\n/* ALERTA */\n\n.fw-state-alert {\n    background: #fff0f0;\n    border-color: #efaaaa;\n}\n\n.fw-state-alert .fw-state-dot {\n    background: #c62828;\n    box-shadow: 0 0 7px rgba(198, 40, 40, 0.55);\n\n    animation: fwPulse 1.2s infinite;\n}\n\n.fw-state-alert .fw-state-label {\n    color: #a55252;\n}\n\n.fw-state-alert .fw-state-value {\n    color: #b71c1c;\n}\n\n@keyframes fwPulse {\n    0% {\n        transform: scale(1);\n        opacity: 1;\n    }\n\n    50% {\n        transform: scale(1.3);\n        opacity: 0.55;\n    }\n\n    100% {\n        transform: scale(1);\n        opacity: 1;\n    }\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1390,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5de854119fdfd338",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-node-mysql": "3.0.0"
+        }
+    }
+]
